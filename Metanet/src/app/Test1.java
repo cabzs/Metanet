@@ -3,98 +3,100 @@ package app;
 	import java.util.Scanner;
 	import java.util.ArrayList;
 	 
+	import java.util.Scanner;
+	import java.util.ArrayList;
+	 
 	public class Test1 {
 	    public static void main(String[] args) {
 	        Scanner sc = new Scanner(System.in);
-	        // ÀÌ¸§À» ÀúÀåÇÒ ArrayList name »ı¼º
+	        // ì´ë¦„ì„ ì €ì¥í•  ArrayList name ìƒì„±
 	        ArrayList name = new ArrayList();
-	        // ¹øÈ£¸¦ ÀúÀåÇÒ ArrayList num »ı¼º
+	        // ë²ˆí˜¸ë¥¼ ì €ì¥í•  ArrayList num ìƒì„±
 	        ArrayList num = new ArrayList();
-	        // ÀÌ¸§, ¹øÈ£¸¦ ÀÔ·Â¹ŞÀ» º¯¼ö ¼±¾ğ
+	        // ì´ë¦„, ë²ˆí˜¸ë¥¼ ì…ë ¥ë°›ì„ ë³€ìˆ˜ ì„ ì–¸
 	        String na, nu;
-	        // Á¾·áÇßÀ»¶§ while¹®À» Å»ÃâÇÒ º¯¼ö ¼±¾ğ
+	        // ì¢…ë£Œí–ˆì„ë•Œ whileë¬¸ì„ íƒˆì¶œí•  ë³€ìˆ˜ ì„ ì–¸
 	        boolean bool = true;
 	        
-	        // ¿¬¶ôÃ³ ÇÁ·Î±×·¥ ¹İº¹½ÇÇà
+	        // ì—°ë½ì²˜ í”„ë¡œê·¸ë¨ ë°˜ë³µì‹¤í–‰
 	        while(bool) {
-	            System.out.println("1.¿¬¶ôÃ³ µî·Ï");
-	            System.out.println("2.¿¬¶ôÃ³ º¸±â");
-	            System.out.println("3.¿¬¶ôÃ³ »èÁ¦");
-	            System.out.println("4.¸ğµç ¿¬¶ôÃ³ º¸±â");
-	            System.out.println("5.Á¾·á");
-	            // º¸±â¸¦ ¼±ÅÃ¹ŞÀ½
+	            System.out.println("1.ì—°ë½ì²˜ ë“±ë¡");
+	            System.out.println("2.ì—°ë½ì²˜ ë³´ê¸°");
+	            System.out.println("3.ì—°ë½ì²˜ ì‚­ì œ");
+	            System.out.println("4.ëª¨ë“  ì—°ë½ì²˜ ë³´ê¸°");
+	            System.out.println("5.ì¢…ë£Œ");
+	            // ë³´ê¸°ë¥¼ ì„ íƒë°›ìŒ
 	            int input = sc.nextInt();
 	            switch(input) {
 	            case 1:
-	                System.out.println("µî·ÏÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+	                System.out.println("ë“±ë¡í•  ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 	                na = sc.next();
-	                // ÀÌ¸§ÀÌ µî·ÏµÇ¾î ÀÖÁö ¾Ê´Ù¸é ¿¬¶ôÃ³ ÀúÀå
-	                // indexOf´Â °´Ã¼°¡ ¾ø´Ù¸é -1 ÀÖÀ¸¸é ±× À§Ä¡¸¦ ¹İÈ¯
-	                // -1ÀÌ ¹İÈ¯µÈ´Ù´Â°Ç Áßº¹ÀÌ ¾ø´Ù´Â ¶æÀÌ´Ù.
+	                // ì´ë¦„ì´ ë“±ë¡ë˜ì–´ ìˆì§€ ì•Šë‹¤ë©´ ì—°ë½ì²˜ ì €ì¥
+	                // indexOfëŠ” ê°ì²´ê°€ ì—†ë‹¤ë©´ -1 ìˆìœ¼ë©´ ê·¸ ìœ„ì¹˜ë¥¼ ë°˜í™˜
+	                // -1ì´ ë°˜í™˜ëœë‹¤ëŠ”ê±´ ì¤‘ë³µì´ ì—†ë‹¤ëŠ” ëœ»ì´ë‹¤.
 	                if(name.indexOf(na) == -1) {
 	                    name.add(na);
-	                    System.out.println("µî·ÏÇÒ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
+	                    System.out.println("ë“±ë¡í•  ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
 	                    nu = sc.next();
-	                    // ÀÔ·Â¹ŞÀº ¹øÈ£¸¦ ArrayList num¿¡ Ãß°¡
+	                    // ì…ë ¥ë°›ì€ ë²ˆí˜¸ë¥¼ ArrayList numì— ì¶”ê°€
 	                    num.add(nu);
-	                    System.out.println("µî·ÏµÈ ÀÌ¸§Àº : " + na + " / ¹øÈ£´Â : " + nu + "ÀÔ´Ï´Ù.");
-	                // ÀÌ¸§ÀÌ µî·ÏµÇ¾î ÀÖ´Ù¸é Áßº¹µÈ ÀÌ¸§ÀÌ ÀÖ´Ù°í ¹İÈ¯
+	                    System.out.println("ë“±ë¡ëœ ì´ë¦„ì€ : " + na + " / ë²ˆí˜¸ëŠ” : " + nu + "ì…ë‹ˆë‹¤.");
+	                // ì´ë¦„ì´ ë“±ë¡ë˜ì–´ ìˆë‹¤ë©´ ì¤‘ë³µëœ ì´ë¦„ì´ ìˆë‹¤ê³  ë°˜í™˜
 	                } else {
-	                    System.out.println("Áßº¹µÈ ÀÌ¸§ÀÌ ÀÖ½À´Ï´Ù.");
+	                    System.out.println("ì¤‘ë³µëœ ì´ë¦„ì´ ìˆìŠµë‹ˆë‹¤.");
 	                }
 	                break;
 	        
 	            case 2:
-	                System.out.println("´©±¸ÀÇ ¿¬¶ôÃ³¸¦ È®ÀÎÇÏ½Ã°Ú½À´Ï±î?");
-	                // ÀúÀåµÇ¾î ÀÖ´Â ¸ğµç ÀÌ¸§À» È®ÀÎ
+	                System.out.println("ëˆ„êµ¬ì˜ ì—°ë½ì²˜ë¥¼ í™•ì¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+	                // ì €ì¥ë˜ì–´ ìˆëŠ” ëª¨ë“  ì´ë¦„ì„ í™•ì¸
 	                for(int i=0; i<name.size(); i++) {
-	                    System.out.println("ÀÌ¸§ : " + name.get(i));
+	                    System.out.println("ì´ë¦„ : " + name.get(i));
 	                }
 	                na = sc.next();
-	                // È®ÀÎÇÒ ÀÌ¸§ÀÇ ÀÎµ¦½º ¹øÈ£ È®ÀÎ
+	                // í™•ì¸í•  ì´ë¦„ì˜ ì¸ë±ìŠ¤ ë²ˆí˜¸ í™•ì¸
 	                // name.indexOf(na);
 	                
-	                // ÀúÀåµÇ¾î ÀÖ´Â °ªÀÌ ¾øÀ¸¸é -1ÀÌ Ãâ·Â
+	                // ì €ì¥ë˜ì–´ ìˆëŠ” ê°’ì´ ì—†ìœ¼ë©´ -1ì´ ì¶œë ¥
 	                if(name.indexOf(na) == -1) {
-	                    System.out.println("¸ñ·Ï¿¡ ¾ø½À´Ï´Ù.");
+	                    System.out.println("ëª©ë¡ì— ì—†ìŠµë‹ˆë‹¤.");
 	                } else {
-	                    System.out.println(na + "ÀÇ ¹øÈ£´Â " + num.get(name.indexOf(na)));
+	                    System.out.println(na + "ì˜ ë²ˆí˜¸ëŠ” " + num.get(name.indexOf(na)));
 	                    
 	                }
 	                break;
 	            
 	            case 3:
-	                System.out.println("´©±¸ÀÇ ¿¬¶ôÃ³¸¦ »èÁ¦ÇÏ½Ã°Ú½À´Ï±î?");
-	                // ÀúÀåµÇ¾î ÀÖ´Â ¸ğµç ÀÌ¸§À» StringÀ¸·Î º¯È¯ÇÏ¿© Ãâ·Â
+	                System.out.println("ëˆ„êµ¬ì˜ ì—°ë½ì²˜ë¥¼ ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+	                // ì €ì¥ë˜ì–´ ìˆëŠ” ëª¨ë“  ì´ë¦„ì„ Stringìœ¼ë¡œ ë³€í™˜í•˜ì—¬ ì¶œë ¥
 	                for(int i=0; i<name.size(); i++) {
 	                    na = (String)name.get(i);
 	                    System.out.println(na);
 	                }
-	                System.out.println("»èÁ¦ÇÒ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä");
+	                System.out.println("ì‚­ì œí•  ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”");
 	                na = sc.next();
-	                // ÀÔ·Â¹ŞÀº ÀÌ¸§À» ArrayList name¿¡¼­ »èÁ¦
+	                // ì…ë ¥ë°›ì€ ì´ë¦„ì„ ArrayList nameì—ì„œ ì‚­ì œ
 	                System.out.println(name.remove(na));
 	                break;
 	            
 	            case 4:
-	                System.out.println("ÀúÀåµÇ¾î ÀÖ´Â ¿¬¶ôÃ³´Â");
-	                // ÀúÀåµÇ¾î ÀÖ´Â ¿¬¶ôÃ³ÀÇ ÀÌ¸§°ú ¹øÈ£¸¦ ¸ğµÎ Ãâ·Â
+	                System.out.println("ì €ì¥ë˜ì–´ ìˆëŠ” ì—°ë½ì²˜ëŠ”");
+	                // ì €ì¥ë˜ì–´ ìˆëŠ” ì—°ë½ì²˜ì˜ ì´ë¦„ê³¼ ë²ˆí˜¸ë¥¼ ëª¨ë‘ ì¶œë ¥
 	                for(int i=0; i<name.size(); i++) {
-	                    System.out.println("ÀÌ¸§ : " + name.get(i) + " / ¹øÈ£ : " + num.get(i));
+	                    System.out.println("ì´ë¦„ : " + name.get(i) + " / ë²ˆí˜¸ : " + num.get(i));
 	                }
-	                // ÀúÀåµÇ¾î ÀÖ´Â °ªÀÌ ¾øÀ»¶§ ¸ñ·ÏÀÌ ¾ø´Ù, ¿¬¶ôÃ³¸¦ Ãß°¡ÇØ¶ó ¹®±¸ Ãâ·Â
+	                // ì €ì¥ë˜ì–´ ìˆëŠ” ê°’ì´ ì—†ì„ë•Œ ëª©ë¡ì´ ì—†ë‹¤, ì—°ë½ì²˜ë¥¼ ì¶”ê°€í•´ë¼ ë¬¸êµ¬ ì¶œë ¥
 	                if(name.size()==0) {
-	                    System.out.println("¸ñ·ÏÀÌ ¾ø½À´Ï´Ù.");
-	                    System.out.println("¿¬¶ôÃ³¸¦ Ãß°¡ÇØÁÖ¼¼¿ä.");
+	                    System.out.println("ëª©ë¡ì´ ì—†ìŠµë‹ˆë‹¤.");
+	                    System.out.println("ì—°ë½ì²˜ë¥¼ ì¶”ê°€í•´ì£¼ì„¸ìš”.");
 	                }
 	                break;
 	                
 	            case 5:
-	                // Á¾·áÇÏ¸é while¹® Å»Ãâ
-	                System.out.println("Á¾·áÇÏ°Ú½À´Ï´Ù.");
+	                // ì¢…ë£Œí•˜ë©´ whileë¬¸ íƒˆì¶œ
+	                System.out.println("ì¢…ë£Œí•˜ê² ìŠµë‹ˆë‹¤.");
 	                bool = false;
 	            }
 	        }
 	    }
 	}
-

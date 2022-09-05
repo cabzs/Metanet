@@ -7,8 +7,6 @@ import service.BankService;
 import service.BankServiceImpl;
 
 public class SubView {
-	//¸ŞÀÎ ¸Ş´º ´ÙÀ½À¸·Î ¶ç¿öÁö´Â ¸Ş´º Ã¢
-	//ÀÔ Ãâ±İ, ¼Û±İ, µî... 
 	
 	static Member member;
 	private static Scanner sc = new Scanner(System.in);
@@ -18,38 +16,38 @@ public class SubView {
 	public static void subMenu() {
 		
 		System.out.println("-----------------------------");
-		System.out.println( member.getId() +"  ´Ô ·Î±×ÀÎ ÁßÀÔ´Ï´Ù....  ");
+		System.out.println( member.getId() +"ë‹˜ í˜„ì¬ ë¡œê·¸ì¸ ì¤‘....  ");
 		System.out.println("-----------------------------");
-		System.out.println("¼±ÅÃ>");	
+		System.out.println("ï¿½ï¿½ï¿½ï¿½>");	
 		
-		//¸ŞÀÎ¸Ş´º - È¸¿ø°¡ÀÔ, ·Î±×ÀÎ
+		//ì… ì¶œê¸ˆ, ì”ê³  í™•ì¸ ...
 		System.out.println("--------------------------------------------------");
-		System.out.println("  1. ÀÔ±İ  |  2.Ãâ±İ  |  3.ÀÜ°í È®ÀÎ  |  4.Á¾·á  ");
+		System.out.println("  1. ì…ê¸ˆ  |  2. ì¶œê¸ˆ  |  3. ì”ê³  í™•ì¸  |  4.ë‚˜ê°€ê¸° ");
 		System.out.println("--------------------------------------------------");
-		System.out.println("¼±ÅÃ>");
+		System.out.println("ì„ íƒ >");
 		
 		int menuNum = sc.nextInt();
 		Scanner sc = new Scanner(System.in);
 		
 		switch (menuNum) {
 		case 1:
-			System.out.println("ÀÔ±İ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä>");
+			System.out.println("ì…ê¸ˆí•˜ì‹¤ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”");
 			amount = sc.nextInt();
 			service.deposit(amount);
 			
 			break;
 
 		case 2:
-			System.out.println("Ãâ±İ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä>");
+			System.out.println("ì¶œê¸ˆí•˜ì‹¤ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”");
 			amount = sc.nextInt();
 			service.withDraw(amount);
 			break;
 		
 			
 		case 3:
-			System.out.println("ÇöÀç" + member.getName() +"´ÔÀÇ ÀÜ¾×ÀÔ´Ï´Ù.");
-			System.out.println("°èÁÂ¹øÈ£ : " + member.getAccount() );
-			System.out.println("ÃÑ" + member.getBalance() + "¿ø ÀÔ´Ï´Ù.");
+			System.out.println(member.getName() +"ë‹˜ì˜ ê³„ì¢Œ");
+			System.out.println("ê³„ì¢Œë²ˆí˜¸ :" + member.getAccount() );
+			System.out.println("ì´ ê¸ˆì•¡ì€" + member.getBalance() + "ì› ì…ë‹ˆë‹¤.");
 			break;
 			
 			

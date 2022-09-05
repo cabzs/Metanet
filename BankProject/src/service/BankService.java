@@ -4,32 +4,32 @@ import dto.Member;
 
 public interface BankService {
 	/**
-	 * ¾ÆÀÌµğ Áßº¹ Ã¼Å©
+	 * ì•„ì´ë”” ì¤‘ë³µ ì²´í¬
 	 * */
 	public void idCheck(String id);
 	
 	
 	/**
-	 * È¸¿ø°¡ÀÔ
+	 * íšŒì›ê°€ì…
 	 * */
 	public void insert(Member member);
 
 	
 	/**
-	 * ·Î±×ÀÎ
+	 * ë¡œê·¸ì¸
 	 * @return 
 	 * */
 	public Member login(String id, String pwd);
 	
 	
 	/**
-	 * ÀÔ±İ
+	 * ì…ê¸ˆ
 	 * */
 	public void deposit(int amount);
 
 	
 	/**
-	 * Ãâ±İ
+	 * ì¶œê¸ˆ
 	 * */
 	public void withDraw(int amount);
 	

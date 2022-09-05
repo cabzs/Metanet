@@ -5,12 +5,12 @@ import dto.Member;
 public interface BankDAO {
 	
 	/**
-	 * È¸¿ø°¡ÀÔ
+	 * íšŒì›ê°€ì…
 	 * */
 	public void insert(Member member);
 	
 	/**
-	 * ·Î±×ÀÎ
+	 * ë¡œê·¸ì¸
 	 * */
 	public void login(String id, String pwd);
 }

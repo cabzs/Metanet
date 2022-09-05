@@ -2,13 +2,13 @@ package dto;
 
 public class Member {
 	
-	private String id; //아이디
-	private String pwd; //비밀번호
-	private String name; //이름
-	private String account; //계좌번호
+	private String id; 
+	private String pwd; 
+	private String name; 
+	private String account; 
 	
-	private int balance; //잔고
-	private int point; //적립금
+	private int balance;
+	private int point;
 
 	public Member(String id, String pwd, String name, String account, int balance, int point) {
 		super();

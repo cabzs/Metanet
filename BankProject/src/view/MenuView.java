@@ -19,22 +19,22 @@ public class MenuView {
 	public void mainMenu(){
 		
 		LocalDate now = LocalDate.now();
-		System.out.println("----------     JAVA ÀºÇà     ------------");
-		System.out.println("         ÇöÀç ³¯Â¥ : "  +  now    );
+		System.out.println("----------     JAVA ì€í–‰    ------------");
+		System.out.println("         í˜„ì¬ ë‚ ì§œ : "  +  now    );
 		System.out.println("------------------------------------------");
 		
-		//List<String> idList = new ArrayList<String>(); //¾ÆÀÌµğ ÀúÀå
-		ArrayList idList = new ArrayList(); //¾ÆÀÌµğ ÀúÀå
-		ArrayList nameList = new ArrayList(); //ÀÌ¸§ ÀúÀå
-		ArrayList accountList = new ArrayList(); //°èÁÂ¹øÈ£ ·£´ı»ı¼º ÈÄ ÀúÀå
+		//List<String> idList = new ArrayList<String>(); //ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½
+		ArrayList idList = new ArrayList(); //ì•„ì´ë””
+		ArrayList nameList = new ArrayList(); //ì´ë¦„
+		ArrayList accountList = new ArrayList(); //ê³„ì¢Œë²ˆí˜¸
 		
 		boolean flag = true;
 		while(flag) {
-		//¸ŞÀÎ¸Ş´º - È¸¿ø°¡ÀÔ, ·Î±×ÀÎ
+		//íšŒì›ê°€ì…, ë¡œê·¸ì¸
 		System.out.println("-----------------------------------------------");
-		System.out.println("  1. È¸¿ø°¡ÀÔ |   2.·Î±×ÀÎ  | 3. ³» Á¤º¸ È®ÀÎ ");
+		System.out.println("  1. íšŒì›ê°€ì… |   2.ë¡œê·¸ì¸  | 3. ë‚´ ì •ë³´ í™•ì¸ ");
 		System.out.println("-----------------------------------------------");
-		System.out.println("¼±ÅÃ>");	
+		System.out.println("ì„ íƒ>");	
 		
 		Scanner sc = new Scanner(System.in);
 		int menuNum = sc.nextInt();
@@ -43,42 +43,42 @@ public class MenuView {
 
 		switch (menuNum) {
 		case 1:
-				System.out.println("È¸¿ø°¡ÀÔÀ» À§ÇØ ÇÊ¿äÇÑ Á¤º¸¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+				System.out.println("ê°€ì…í•˜ì‹¤ ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”");
 				
-				System.out.print("¾ÆÀÌµğ : ");
+				System.out.print("ì•„ì´ë”” : ");
 				id = sc.next();
 				
 				if(idList.indexOf(id)== -1) {
-					//indexOf´Â °´Ã¼°¡ ¾ø´Ù¸é -1, ÀÖÀ¸¸é ±× À§Ä¡¸¦ ¹İÈ¯
-					//ÀÔ·ÂÇÑ ¾ÆÀÌµğ°¡ Áßº¹ÀÌ¾Æ´Ï¶ó¸é -1 ¸®ÅÏ
-					idList.add(id); //¾ÆÀÌµğ Ãß°¡
+					//indexOfëŠ” ê°ì²´ê°€ ì—†ë‹¤ë©´ -1 ìˆìœ¼ë©´ ê·¸ ìœ„ì¹˜ë¥¼ ë°˜í™˜
+					//ì¤‘ë³µì´ ì—†ë‹¤ë©´ -1ì„ ë°˜í™˜í•œë‹¤
+					idList.add(id); //ì•„ì´ë”” ì €ì¥
 					
-					System.out.print("ÀÌ¸§ : ");
+					System.out.print("ì´ë¦„ : ");
 					name = sc.next();
-					nameList.add(name); //ÀÌ¸§ Ãß°¡
+					nameList.add(name); //ì´ë¦„ ì €ì¥
 					
-					System.out.print("ºñ¹Ğ¹øÈ£ : ");
+					System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 					String pwd = sc.next();
 					
-					System.out.print("ºñ¹Ğ¹øÈ£ È®ÀÎ : ");
+					System.out.print("ë¹„ë°€ë²ˆí˜¸ í™•ì¸ : ");
 					String pwd2 = sc.next();
 					
 					
-					if(pwd.equals(pwd2)) { //ºñ¹Ğ¹øÈ£ ÀÏÄ¡ÇÑ´Ù¸é È¸¿ø ÀúÀå
+					if(pwd.equals(pwd2)) { //ë¹„ë°€ë²ˆí˜¸ ì¼ì¹˜í•˜ëŠ”ì§€ í™•ì¸
 						//Member member = new Member(id, pwd, name, null, 0, 0);
 						//dao.insert(member);
 						
-						//ºñ¹Ğ¹øÈ£±îÁöµµ ÀÏÄ¡ÇÑ´Ù¸é °èÁÂ¹øÈ£ ·£´ı »ı¼º ÈÄ ¸®½ºÆ®¿¡ Ãß°¡
+						//ì¼ì¹˜í•œë‹¤ë©´ ëœë¤ìœ¼ë¡œ ê³„ì¢Œë²ˆí˜¸ ìƒì„±í›„ ì €ì¥
 						String ac = account.random();
 						accountList.add(ac); 
 						
 						System.out.println();
-						System.out.println("*È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÇ¾ú½À´Ï´Ù :)");
+						System.out.println("íšŒì›ê°€ì… ì„±ê³µ!");
 						//flag = false;
 						break;
 						
 					} else {
-						System.out.println("ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.");
+						System.out.println("ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 						//flag = false;
 						break;
 					}
@@ -86,49 +86,49 @@ public class MenuView {
 				
 				
 		case 2:
-			System.out.println("·Î±×ÀÎÀ» À§ÇØ ÇÊ¿äÇÑ Á¤º¸¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("ë¡œê·¸ì¸í•  ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			
-			System.out.print("¾ÆÀÌµğ : ");
+			System.out.print("ì•„ì´ë”” : ");
 			String userId = sc.next();
 			
-			System.out.print("ºñ¹Ğ¹øÈ£ : ");
+			System.out.print("ë¹„ë°€ë²ˆí˜¸ : ");
 			String userPwd = sc.next();
 			
-			//¾ÆÀÌµğ, ºñ¹Ğ¹øÈ£°¡ ÀúÀåµÈ »ç¿ëÀÚ Á¤º¸¿Í ÀÏÄ¡ÇÑ´Ù¸é ´ÙÀ½ ¸Ş´º¸¦ ¶ç¿î´Ù. (·Î±×ÀÎ)
+			//ì•„ì´ë”” ë¹„ë²ˆì´ ì¼ì¹˜í•˜ë©´ ë¡œê·¸ì¸
 			controller.login(userId, userPwd);
 		
 		case 3:
 			
-//			System.out.println("¾ÆÀÌµğ ¸ñ·Ï");
+//			System.out.println("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½");
 //			for(int i=0; i< idList.size(); i++) {
 //				System.out.println(idList.get(i).toString());
 //			}
 //			
-//			System.out.println("ÀÌ¸§ ¸ñ·Ï");
+//			System.out.println("ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½");
 //			for(int i=0; i< nameList.size(); i++) {
 //				System.out.println(nameList.get(i).toString());
 //			}
 //			
-//			System.out.println("°èÁÂ¹øÈ£ ¸ñ·Ï");
+//			System.out.println("ï¿½ï¿½ï¿½Â¹ï¿½È£ ï¿½ï¿½ï¿½");
 //			for(int i=0; i< accountList.size(); i++) {
 //				System.out.println(accountList.get(i).toString());
 //			}
 			
-			System.out.println("Á¤º¸¸¦ È®ÀÎÇÏ°í ½ÍÀº ¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+			System.out.println("ì •ë³´ë¥¼ í™•ì¸í•˜ì‹¤ ì•„ì´ë””ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš”.");
 			for(int i=0; i<idList.size(); i++) {
-                System.out.println("¾ÆÀÌµğ : " + idList.get(i));
+                System.out.println("ì•„ì´ë””: " + idList.get(i));
             }
 			
-			id = sc.next(); //¾ÆÀÌµğ ÀÔ·Â¹ŞÀ½
+			id = sc.next(); //ì•„ì´ë”” ì…ë ¥
 			
-			if(idList.indexOf(id)== -1) { //ÀÔ·ÂÇÑ ¾ÆÀÌµğ°¡ ¾ø´Ù¸é -1 ¸®ÅÏ
-				System.out.println("ÇØ´ç ¾ÆÀÌµğ°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.");
+			if(idList.indexOf(id)== -1) { //ì•„ì´ë””ê°€ ì—†ë‹¤ë©´
+				System.out.println("ì¡´ì¬í•˜ì§€ ì•ŠëŠ” ì•„ì´ë””ì…ë‹ˆë‹¤");
 				
-			} else if (idList.indexOf(id)!= -1) { //ÇØ´ç ¾ÆÀÌµğ°¡ Á¸ÀçÇÑ´Ù¸é, id·Î Ã£Àº À§Ä¡°ªÀ¸·Î Á¤º¸ ºÒ·¯¿È
+			} else if (idList.indexOf(id)!= -1) { //ì•„ì´ë””ê°€ ì¡´ì¬í•œë‹¤ë©´
 				System.out.println("===============================================");
-				System.out.println("* ¾ÆÀÌµğ: " + idList.get(idList.indexOf(id)));
-				System.out.println("* ÀÌ¸§: " + nameList.get(idList.indexOf(id)));
-				System.out.println("* °èÁÂ¹øÈ£: " + accountList.get(idList.indexOf(id)));
+				System.out.println("* ì•„ì´ë”” : " + idList.get(idList.indexOf(id)));
+				System.out.println("* ì´ë¦„ : " + nameList.get(idList.indexOf(id)));
+				System.out.println("* ê³„ì¢Œë²ˆí˜¸ : " + accountList.get(idList.indexOf(id)));
 				System.out.println("===============================================");
 				
 			}

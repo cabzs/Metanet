@@ -6,7 +6,7 @@ public class Account {
 	
 	
 	public String random() {
-		// 4 - 3 - 6 (0000-000-000000) °èÁÂ¹øÈ£ ·£´ı »ı¼º±â
+		// 4 - 3 - 6 (0000-000-000000) ê³„ì¢Œë²ˆí˜¸ ëœë¤ ìƒì„±ê¸°
 		Random random = new Random();
 		int account1 = (int)(Math.random() * (9999 - 1000 + 1));
 		int account2 = (int)(Math.random() * (999 - 100 + 1));
@@ -23,7 +23,7 @@ public class Account {
 	
 	/*
 	public static void main(String[] args) {
-		Account account = new Account(); //ÀÎ½ºÅÏ½º »ı¼º
+		Account account = new Account(); //
 		account.randomAccount();
 	}
 	*/

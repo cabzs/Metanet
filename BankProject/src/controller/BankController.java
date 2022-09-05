@@ -11,12 +11,12 @@ public class BankController {
 	static BankService bankService = new BankServiceImpl();
 	
 	/**
-	 * ·Î±×ÀÎ
+	 * ë¡œê·¸ì¸
 	 * */
 	public static void login(String id, String pwd) {
 		try {
 			Member member = bankService.login(id, pwd);
-			//·Î±×ÀÎ ¼º°øÇÏ¸é subview ¶ç¿ì±â
+			//ë¡œê·¸ì¸ ì„±ê³µì‹œ subviewë¡œ ì´ë™
 			SubView.subMenu();
 			
 			
