@@ -1,31 +1,19 @@
 package app;
 
-import java.util.Scanner;
+import java.util.Properties;
 
 public class Ex4Main {
 
 	public static void main(String[] args) {
 		Ex4 ex = new Ex4();
-		boolean result = ex.login("abc", "123");
+		//boolean result = ex.login("abc1", "123");
+		boolean result = ex.login("a", "1");
+		
 		if(result) {
-			System.out.println("·Î±×ÀÎ µÇ¾ú½À´Ï´Ù.");
-			System.out.println("--------------------");
-			System.out.println("    1. ·Î±×¾Æ¿ô     ");
-			System.out.println("--------------------");
-			System.out.println("¼±ÅÃ>");
-			Scanner scanner = new Scanner(System.in);
-			int menu = Integer.parseInt(scanner.nextLine()); //nextLineÀ» Ä³½ºÆÃ
-			if(menu == 1) {
-				System.out.println("¾ÆÀÌµğ¸¦ ÇÑ¹ø ´õ ÀÔ·ÂÇÏ¼¼¿ä");
-				String userId = scanner.nextLine();
-				//ÀÔ·Â¹ŞÀº ¾ÆÀÌµğ¿Í ·Î±×ÀÎ ÁßÀÎ ¾ÆÀÌµğ ºñ±³
-				if(userId.equals(ex.member.getUserId())) {
-					ex.logout(userId);			
-				}
-			}
-			
+			System.out.println("ê´€ë¦¬ì ë¡œê·¸ì¸ ë˜ì—ˆìŠµë‹ˆë‹¤.");
+			new Ex10().setVisible(true);
 		}else {
-			System.out.println("id ¶Ç´Â password°¡ ¿Ã¹Ù¸£Áö ¾Ê½À´Ï´Ù");
+			System.out.println("id ë˜ëŠ” passwordê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 		}		
 
 	}

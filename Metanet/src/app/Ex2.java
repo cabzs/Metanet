@@ -6,8 +6,8 @@ public class Ex2 {
 	private String userPwd;
 	private String userName;
 	
-	private String account; //°èÁÂ¹øÈ£
-	private int balance; //ÀÜ°í
+	private String account; //ï¿½ï¿½ï¿½Â¹ï¿½È£
+	private int balance; //ï¿½Ü°ï¿½
 	
 	
 	public Ex2(String userId, String userPwd, String userName, String account, int balance) {
@@ -18,6 +18,16 @@ public class Ex2 {
 		this.balance = balance;
 	}
 	
+	
+	
+	public Ex2(String userId, String userPwd, String userName) {
+		super();
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+	}
+
+
 	public String getUserId() {
 		return userId;
 	}

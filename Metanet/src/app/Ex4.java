@@ -1,5 +1,6 @@
 package app;
 
+import java.util.Properties;
 import java.util.Scanner;
 
 public class Ex4 {
@@ -14,24 +15,29 @@ public class Ex4 {
 
 	public Ex2 member;
 	//Ex02[] ex2 = new Ex02[2];
+	
 	public Ex4() {
-		member = new Ex2("abc","123", "È«±æµ¿", null, 0); // È¸¿ø°¡ÀÔ
+		Properties properties = new Ex9().getAdminInfo();
+
+		member = new Ex2(properties.getProperty("username"),
+							properties.getProperty("userpassword"),
+							"í™ê¸¸ë™", null, 0); // íšŒì›ê°€ì…
 	//	ex2[0] = member;
 	}
 	
-	public boolean login(String userId, String userPwd) {
+	public boolean login(String id, String pwd) {
 		
 		boolean result = false;
-		
-			Scanner scanner = new Scanner(System.in);
-			System.out.println("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-			userId = scanner.nextLine();
 			
-			System.out.println("ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä");
-			userPwd = scanner.nextLine();
+//			Scanner scanner = new Scanner(System.in);
+//			System.out.println("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+//			userId = scanner.nextLine();
+//			
+//			System.out.println("ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”");
+//			userPwd = scanner.nextLine();
 			
-			if(userId.equals(member.getUserId()) && userPwd.equals(member.getUserPwd())) {
-				System.out.print(member.getUserName() + "´Ô ");
+			if(id.equals(member.getUserId()) && pwd.equals(member.getUserPwd())) {
+				System.out.print(member.getUserName() + "ë‹˜ ");
 				result = true;
 			}
 			return result;
@@ -39,7 +45,7 @@ public class Ex4 {
 	}
 	
 	public void logout(String userId) {
-		System.out.println("Á¤»óÀûÀ¸·Î ·Î±×¾Æ¿ô µÇ¾ú½À´Ï´Ù");
+		System.out.println("ì •ìƒì ìœ¼ë¡œ ë¡œê·¸ì•„ì›ƒ ë˜ì—ˆìŠµë‹ˆë‹¤");
 		
 	}
 	
