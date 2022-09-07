@@ -5,9 +5,16 @@ import dto.Member;
 public interface BankDAO {
 	
 	/**
+	 * 아이디 중복체크
+	 * */
+	public boolean idCheck(String id);
+
+	
+	/**
 	 * 회원가입
 	 * */
-	public void insert(Member member);
+	public boolean insert(Member member);
+	
 	
 	/**
 	 * 로그인

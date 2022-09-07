@@ -8,22 +8,21 @@ import service.BankServiceImpl;
 
 public class SubView {
 	
-	static Member member;
+	public static Member member;
 	private static Scanner sc = new Scanner(System.in);
 	public static BankService service = new BankServiceImpl();
 	static int amount ;
 	
 	public static void subMenu() {
 		
-		System.out.println("-----------------------------");
+		System.out.println("*******************************");
 		System.out.println( member.getId() +"님 현재 로그인 중....  ");
-		System.out.println("-----------------------------");
-		System.out.println("����>");	
+		System.out.println("*******************************");
 		
 		//입 출금, 잔고 확인 ...
-		System.out.println("--------------------------------------------------");
+		System.out.println("-----------------------------------------------------");
 		System.out.println("  1. 입금  |  2. 출금  |  3. 잔고 확인  |  4.나가기 ");
-		System.out.println("--------------------------------------------------");
+		System.out.println("-----------------------------------------------------");
 		System.out.println("선택 >");
 		
 		int menuNum = sc.nextInt();

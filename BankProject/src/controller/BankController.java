@@ -1,5 +1,9 @@
 package controller;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 import dto.Member;
 import service.BankService;
 import service.BankServiceImpl;
@@ -8,24 +12,51 @@ import view.SubView;
 
 public class BankController {
 	
-	static BankService bankService = new BankServiceImpl();
+	private static Scanner sc = new Scanner(System.in);
+	static BankService service = new BankServiceImpl();
+	
+	/**
+	 * 회원가입
+	 * */
+	public boolean insert(Member member) {
+		//비밀번호 일치할때 회원가입
+		boolean result = service.insert(member);
+		
+		return result;
+		
+	}
+	
+	/**
+	 * 아이디 중복 체크
+	 * */
+	public boolean idCheck(String id) {
+		boolean result = service.idCheck(id); 
+		return result;
+	}
+	
 	
 	/**
 	 * 로그인
 	 * */
-	public static void login(String id, String pwd) {
+	public void login(String id, String pwd) {
 		try {
-			Member member = bankService.login(id, pwd);
-			//로그인 성공시 subview로 이동
+			service.login(id, pwd);
+			//로그인 성공시 subMenu로 이동
 			SubView.subMenu();
 			
 			
-			
 		}catch (Exception e) {
-			//e.printStackTrace();
-			FailView.errorMessage(e.getMessage());
+			e.printStackTrace();
+			//FailView.errorMessage(e.getMessage());
 			
 		}
+	}
+	
+	/**
+	 * 회원 조회
+	 * */
+	public void memberList() {
+		
 	}
 
 }

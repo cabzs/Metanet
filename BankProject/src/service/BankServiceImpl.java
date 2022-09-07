@@ -8,20 +8,26 @@ public class BankServiceImpl implements BankService {
 	
 	BankDAO dao = new BankDAOImpl();
 
-
 	@Override
-	public void insert(Member member) {
-		
-
+	public boolean idCheck(String id) {
+		boolean result = dao.idCheck(id);
+		return result;
 	}
 
 	@Override
-	public void idCheck(String id) {
-		// TODO Auto-generated method stub
+	public boolean insert(Member member) {
+		//아이디 받고, 비밀번호 
+		boolean result = dao.insert(member);
 		
+		return result;
 	}
 
-
+	@Override
+	public void login(String id, String pwd) {
+		//입력받은 아이디로 map에 저장된 정보 꺼내서 입력받은 암호 비교하기
+		dao.login(id, pwd);
+	}
+	
 	@Override
 	public void deposit(int amount) {
 		
@@ -34,10 +40,5 @@ public class BankServiceImpl implements BankService {
 		
 	}
 
-	@Override
-	public Member login(String id, String pwd) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

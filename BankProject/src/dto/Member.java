@@ -6,6 +6,7 @@ public class Member {
 	private String pwd; 
 	private String name; 
 	private String account; 
+	private String date; //가입일
 	
 	private int balance;
 	private int point;
