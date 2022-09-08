@@ -13,9 +13,7 @@ import service.Account;
 public class MenuView {
 	
 	private static Scanner sc = new Scanner(System.in);
-	private static BankDAOImpl dao = new BankDAOImpl();
 	private static BankController controller = new BankController();
-	private static Account account = new Account();
 	
 	public void mainMenu(){
 		
@@ -31,9 +29,9 @@ public class MenuView {
 		boolean flag = true;
 		while(flag) {
 		//회원가입, 로그인
-		System.out.println("-----------------------------------------------");
-		System.out.println("  1. 회원가입 |   2.로그인  | 3. 내 정보 확인 ");
-		System.out.println("-----------------------------------------------");
+		System.out.println("----------------------------");
+		System.out.println("  1. 회원가입 |   2.로그인  ");
+		System.out.println("----------------------------");
 		System.out.println("선택>");	
 		
 		Scanner sc = new Scanner(System.in);
@@ -61,10 +59,10 @@ public class MenuView {
 					pwd2 = sc.next();
 					
 					if(pwd.equals(pwd2)) { //비밀번호 일치하는지 확인
-						Member member = new Member(id, pwd, name, null, 0, 0);
+						Member member = new Member(id, pwd, name, null, null, 0, 0);
 						boolean result1 = controller.insert(member);
 						
-							if(result) {
+							if(result1) {
 								System.out.println();
 								System.out.println("회원가입 성공!");
 							break;
@@ -90,9 +88,9 @@ public class MenuView {
 			controller.login(userId, userPwd);
 			break;
 			
-		case 3:
 			/*
-			System.out.println("정보를 확인하실 아이디를 입력해주세요.");
+		case 3:
+			System.out.println("로그인 후 이용가능합니다.");
 			for(int i=0; i<idList.size(); i++) {
                 System.out.println("아이디: " + idList.get(i));
             }

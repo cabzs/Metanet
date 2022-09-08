@@ -1,22 +1,25 @@
 package dto;
 
+import java.time.LocalDate;
+
 public class Member {
 	
 	private String id; 
 	private String pwd; 
 	private String name; 
 	private String account; 
-	private String date; //가입일
+	private LocalDate date; //가입일
 	
 	private int balance;
 	private int point;
 
-	public Member(String id, String pwd, String name, String account, int balance, int point) {
+	public Member(String id, String pwd, String name, String account, LocalDate date, int balance, int point) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
 		this.account = account;
+		this.date = date;
 		this.balance = balance;
 		this.point = point;
 	}
@@ -57,6 +60,14 @@ public class Member {
 	}
 	public void setPoint(int point) {
 		this.point = point;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate now) {
+		this.date = now;
 	}
 
 	

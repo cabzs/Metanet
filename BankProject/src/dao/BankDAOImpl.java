@@ -1,8 +1,12 @@
 package dao;
 
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.time.LocalDate;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import dto.Member;
@@ -12,6 +16,7 @@ import view.SubView;
 public class BankDAOImpl implements BankDAO {
 
 	//List<Member> member = new ArrayList<Member>();
+	LocalDate now = LocalDate.now();
 	Map<String, Member> map = new HashMap<String, Member>();
 	private static Account account = new Account(); //계좌번호 생성
 	
@@ -29,10 +34,24 @@ public class BankDAOImpl implements BankDAO {
 	
 	@Override
 	public boolean insert(Member member) {
-		member.setAccount(account.random());
-		map.put(member.getId(), member);
-		map.put(member.getPwd(), member);
-		map.put(member.getName(), member);
+		
+		try {
+			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+			BufferedWriter writer = new BufferedWriter(new FileWriter("C:/IO/IO.txt", true)); 
+	        String id = "", pwd = "", name = "", ac = "";
+			
+			member.setAccount(account.random());
+			member.setDate(now);
+			map.put(member.getId(), member);
+			map.put(member.getPwd(), member);
+			map.put(member.getName(), member);
+			
+			 //= reader.readLine();
+			
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+		//회원가입한 사용자 정보를 메모장에 저장하기
 		return true;
 	}
 
@@ -48,6 +67,31 @@ public class BankDAOImpl implements BankDAO {
 			System.out.println("로그인 되었습니다.");
 			SubView.member = map.get(id); //subMenu에 가져갈 member 저장!!
 		}
+	}
+
+	@Override
+	public int deposit(String id, int amount) {
+		int nowBalance = (map.get(id).getBalance());
+		int newBalance = nowBalance += amount;
+		map.get(id).setBalance(newBalance);
+		//map.put();
+		
+		return newBalance;
+	}
+
+	@Override
+	public int withdraw(String id, int amount) {
+		int nowBalance = (map.get(id).getBalance());
+		int newBalance = nowBalance -= amount;
+		map.get(id).setBalance(newBalance);
+		
+		return newBalance;
+	}
+
+	@Override
+	public Member findById(String id) {
+		Member member = map.get(id);
+		return member;
 	}
 
 
