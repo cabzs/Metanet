@@ -9,22 +9,22 @@ public class Ex7 {
 	public static void main(String[] args) {
 		int kor, eng, math, total;
 		double avg;
-		String names[] = {"°æ¿©¶û", "°øÃ¤Çö", "±è¹Î¾Æ"};
+		String names[] = {"ê²½ì—¬ëž‘", "ê³µì±„í˜„", "ê¹€ë¯¼ì•„"};
 		int kors[] = { 30 , 20 , 100 };
 		int engs[] = { 100 , 70 , 100 };
 		int maths[] = { 20 , 50 , 100 };
 		
 		List arr = new ArrayList(); 
 		for (int i = 0 ; i < names.length ; i ++) {
-			//´Ù¾çÇÑ °´Ã¼ Ãß°¡ ¹æ¹ý
-			arr.add(names[i]); //¿ÀÅä¹Ú½Ì
+			//ë‹¤ì–‘í•œ ê°ì²´ ì¶”ê°€ ë°©ë²•
+			arr.add(names[i]); //ì˜¤í† ë°•ì‹±
 			arr.add(kors[i]);
 			arr.add(engs[i]);
 			arr.add(maths[i]);
 		}
 		
-		System.out.println("-------------ÇÐ»ý ¼ºÀû Á¶È¸ ÇÁ·Î±×·¥-----------------");
-		System.out.println("ÀÌ¸§ \t ±¹¾î \t¿µ¾î \t¼öÇÐ \tÃÑÁ¡ \tÆò±Õ");
+		System.out.println("-------------í•™ìƒ ì„±ì  ì¡°íšŒ í”„ë¡œê·¸ëž¨-----------------");
+		System.out.println("ì´ë¦„ \t êµ­ì–´ \tì˜ì–´ \tìˆ˜í•™ \tì´ì  \tí‰ê· ");
 		Iterator iterator = arr.iterator();
 		while(iterator.hasNext()) {
 			System.out.print("\n" + iterator.next());

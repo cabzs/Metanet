@@ -83,19 +83,19 @@ public class CalendarEx implements Runnable{
 		}
 		
 		
-		/*
+		
 		LocalDateTime time = LocalDateTime.now();
 		DayOfWeek dayOfWeek = time.getDayOfWeek();
 		int dayOfWeek1 = dayOfWeek.getValue(); //숫자 요일
 		System.out.println(dayOfWeek1 + "요일");
-		System.out.println(dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN));
+		System.out.println("오늘은??"+dayOfWeek.getDisplayName(TextStyle.FULL, Locale.KOREAN));
 		
 		
 		System.out.println("시간 : " + time);
 		
 		LocalDate date1 = LocalDate.now();
 		System.out.println(date1);
-		*/
+		
 
 
 	} //main 끝	

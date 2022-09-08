@@ -12,18 +12,18 @@ public class Ex {
 		
 		while(run) {
 			System.out.println("----------------------------------------");
-			System.out.println("1.ÇĞ»ı¼ö  | 2. Á¡¼öÀÔ·Â |  3. Á¡¼ö¸®½ºÆ®  | 4.");
+			System.out.println("1.í•™ìƒìˆ˜  | 2. ì ìˆ˜ì…ë ¥ |  3. ì ìˆ˜ë¦¬ìŠ¤íŠ¸  | 4.");
 			System.out.println("----------------------------------------");
-			System.out.println("¼±ÅÃ>  ");
+			System.out.println("ì„ íƒ>  ");
 			int selectNo = scanner.nextInt();
 			if(selectNo==1) {
-				System.out.println("ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+				System.out.println("í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 				int studenNum = scanner.nextInt();
 				scores = new int[studentNum];
-				System.out.println("ÇĞ»ı ¼ö°¡ ÀÔ·ÂµÇ¾ú½À´Ï´Ù :)");
+				System.out.println("í•™ìƒ ìˆ˜ê°€ ì…ë ¥ë˜ì—ˆìŠµë‹ˆë‹¤ :)");
 			}
 			else if (selectNo==2) {
-				System.out.println("Á¡¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä :");
+				System.out.println("ì ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” :");
 				for(int i = 0; i<scores.length; i++ ) {
 					System.out.println("scores [ " + i + "] >");
 					scores[i] = scanner.nextInt();

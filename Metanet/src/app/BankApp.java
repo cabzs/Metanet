@@ -9,45 +9,45 @@ public class BankApp implements Bank{
 
 	public static void main(String[] args) {
 			
-		BankApp app = new BankApp(); //ÀÎ½ºÅÏ½º »ı¼º
+		BankApp app = new BankApp(); //ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		boolean run = true;
 		Scanner scanner = new Scanner(System.in);
 		
 		do {
 		
 		System.out.println("-----------------------------");
-		System.out.println("  1. È¸¿ø°¡ÀÔ |   2.·Î±×ÀÎ  ");
+		System.out.println("  1. íšŒì›ê°€ì… |   2.ë¡œê·¸ì¸  ");
 		System.out.println("-----------------------------");
-		System.out.println("¼±ÅÃ>");	
+		System.out.println("ì„ íƒ>");	
 			
 
 		System.out.println("---------------------------------------------");
-		System.out.println(" 1.¿¹±İ  |  2.Ãâ±İ  |  3.ÀÜ°í  |   4.Á¾·á  ");
+		System.out.println(" 1.ì˜ˆê¸ˆ  |  2.ì¶œê¸ˆ  |  3.ì”ê³   |   4.ì¢…ë£Œ  ");
 		System.out.println("---------------------------------------------");
-		System.out.println("¼±ÅÃ>");
+		System.out.println("ì„ íƒ>");
 		
 		int menuNum = scanner.nextInt();
 		
 		
 		switch (menuNum) {
 		case 1:
-			System.out.println("ÀÔ±İ ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä>");
+			System.out.println("ì…ê¸ˆ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”>");
 			amount = scanner.nextInt();
 			app.deposit(amount);
 			
 			break;
 
 		case 2:
-			System.out.println("Ãâ±İ¾×>");
+			System.out.println("ì¶œê¸ˆì•¡>");
 			amount = scanner.nextInt();
 			app.withDraw(amount);
 			
 			break;
 			
 		case 3:
-			System.out.println("ÀÜ°í>");
+			System.out.println("ì”ê³ >");
 			
-			System.out.println("ÇöÀç °èÁÂ ÀÜ¾×Àº (" + balance + ") ¿ø ÀÔ´Ï´Ù.");
+			System.out.println("í˜„ì¬ ê³„ì¢Œ ì”ì•¡ì€ (" + balance + ") ì› ì…ë‹ˆë‹¤.");
 			break;
 			
 		case 4:
@@ -62,7 +62,7 @@ public class BankApp implements Bank{
 		
 		} while (run);
 		
-		System.out.println("ÇÁ·Î±×·¥ Á¾·á");
+		System.out.println("í”„ë¡œê·¸ë¨ ì¢…ë£Œ");
 	
 	}
 
@@ -70,11 +70,11 @@ public class BankApp implements Bank{
 	@Override
 	public int deposit(int amount) {
 		if(amount<0) {
-			System.out.println("ÀÔ±İ¾×Àº 0¿ø ÀÌ»óÀÇ °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä!!!");
+			System.out.println("ì…ê¸ˆì•¡ì€ 0ì› ì´ìƒì˜ ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”!!!");
 		} else {
 			this.balance += amount;
-			System.out.println("ÀÔ±İ¾×Àº (" + amount + ") ¿ø ÀÔ´Ï´Ù.");
-			System.out.println("ÇöÀç °èÁÂ ÀÜ¾×Àº (" + balance + ") ¿ø ÀÔ´Ï´Ù.");
+			System.out.println("ì…ê¸ˆì•¡ì€ (" + amount + ") ì› ì…ë‹ˆë‹¤.");
+			System.out.println("í˜„ì¬ ê³„ì¢Œ ì”ì•¡ì€ (" + balance + ") ì› ì…ë‹ˆë‹¤.");
 		}
 		
 		return balance;
@@ -82,18 +82,18 @@ public class BankApp implements Bank{
 
 	@Override
 	public int withDraw(int amount) {
-		//Ãâ±İ¾× ÀÔ·Â¹Ş¾Æ¼­ ÀÜ°í¿¡¼­ »©ÁØ´Ù
+		//ì¶œê¸ˆì•¡ ì…ë ¥ë°›ì•„ì„œ ì”ê³ ì—ì„œ ë¹¼ì¤€ë‹¤
 		if(amount>balance) {
-			System.out.println("Ãâ±İ¾×ÀÌ °èÁÂ ÀÜ¾×º¸´Ù Å®´Ï´Ù ^^;");
+			System.out.println("ì¶œê¸ˆì•¡ì´ ê³„ì¢Œ ì”ì•¡ë³´ë‹¤ í½ë‹ˆë‹¤ ^^;");
 			
 		} else {
 			this.balance -= amount;
-			System.out.println("Ãâ±İ¾×Àº (" + amount + ") ¿ø ÀÔ´Ï´Ù.");
-			System.out.println("ÇöÀç °èÁÂ ÀÜ¾×Àº (" + balance + ") ¿ø ÀÔ´Ï´Ù.");
+			System.out.println("ì¶œê¸ˆì•¡ì€ (" + amount + ") ì› ì…ë‹ˆë‹¤.");
+			System.out.println("í˜„ì¬ ê³„ì¢Œ ì”ì•¡ì€ (" + balance + ") ì› ì…ë‹ˆë‹¤.");
 		}
 		
 		return balance;
 	}
 	
 	
-}//Å¬·¡½º³¡
+}//í´ë˜ìŠ¤ë

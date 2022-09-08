@@ -29,8 +29,8 @@ public class Ex5 extends JFrame implements ActionListener {
 		pwd_la = new JLabel("PWD");
 		id_tf = new JTextField();
 		pwd_tf = new JTextField();
-		login = new JButton("·Î±×ÀÎ");
-		join= new JButton("È¸¿ø°¡ÀÔ");
+		login = new JButton("ë¡œê·¸ì¸");
+		join= new JButton("íšŒì›ê°€ì…");
 		
 		JPanel p = new JPanel();
 		JPanel p2 = new JPanel(new GridLayout(2,2));
@@ -46,7 +46,7 @@ public class Ex5 extends JFrame implements ActionListener {
 		this.add(p,"South");
 		this.add(p2,"Center");
 		
-		//Frame frame = new Frame(); // frame ÀÎ½ºÅÏ½º »ı¼º
+		//Frame frame = new Frame(); // frame ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		//frame.setSize(300, 450);
 		//frame.setVisible(true);
 		//frame.addWindowListener(this);
@@ -55,13 +55,13 @@ public class Ex5 extends JFrame implements ActionListener {
 		setVisible(true);
 		addWindowListener(new WindowAdapter() {
 			
-			@Override // Ã¢ ´İÀ»¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+			@Override // ì°½ ë‹«ì„ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 				
 			}
 		});
-		login.addActionListener(this); //»ç¿ëÀÚ°¡ ¹öÆ° ´­·¶´ÂÁö °¨ÁöÇÏ´Â ÀÌº¥Æ®
+		login.addActionListener(this); //ì‚¬ìš©ìê°€ ë²„íŠ¼ ëˆŒë €ëŠ”ì§€ ê°ì§€í•˜ëŠ” ì´ë²¤íŠ¸
 		
 		//id = new JTextField("id");
 		//pwd = new JTextField("pwd");
@@ -81,11 +81,11 @@ public class Ex5 extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("·Î±×ÀÎ ¹öÆ° È®ÀÎ! : " + id_tf.getText() );
+		System.out.println("ë¡œê·¸ì¸ ë²„íŠ¼ í™•ì¸! : " + id_tf.getText() );
 		id_tf.setText("");
 		ex6.setVisible(true);
 		this.setVisible(false);
-		ex6.dispose(); //°´Ã¼¸¦ ÇØÁö½ÃÅ²´Ù.
+		ex6.dispose(); //ê°ì²´ë¥¼ í•´ì§€ì‹œí‚¨ë‹¤.
 		
 //		if(id_tf.getText().equals(ex4.member[0].getId()) && pwd_tf.getText().equals(ex4.member[0].getPwd()) ) {
 //			

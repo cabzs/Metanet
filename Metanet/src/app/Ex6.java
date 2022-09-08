@@ -12,7 +12,7 @@ public class Ex6 extends Frame {
 		setResizable(false);
 		this.addWindowListener(new WindowAdapter() {
 			
-			@Override // Ã¢ ´İÀ»¶§ ¹ß»ıÇÏ´Â ÀÌº¥Æ®
+			@Override // ì°½ ë‹«ì„ë•Œ ë°œìƒí•˜ëŠ” ì´ë²¤íŠ¸
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 				
