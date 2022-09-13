@@ -2,9 +2,11 @@ package dao;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,9 +38,9 @@ public class BankDAOImpl implements BankDAO {
 	public boolean insert(Member member) {
 		
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			BufferedWriter writer = new BufferedWriter(new FileWriter("C:/IO/IO.txt", true)); 
-	        String id = "", pwd = "", name = "", ac = "";
+			//회원가입한 사용자 정보를 메모장에 저장하기
+			PrintWriter pw = 
+					new PrintWriter(new FileWriter(new File("C:/Study/algorithm/BankProject/src/members.txt") , true)); //true - 덮어쓰기 가능, 파일은 워크스페이스 폴더내에 저장
 			
 			member.setAccount(account.random());
 			member.setDate(now);
@@ -46,12 +48,22 @@ public class BankDAOImpl implements BankDAO {
 			map.put(member.getPwd(), member);
 			map.put(member.getName(), member);
 			
-			 //= reader.readLine();
+			StringBuilder sb = new StringBuilder(); //하나의 builder내에서 처리가능
+			sb.append(member.getName());
+			sb.append("#");
+			sb.append(member.getId());
+			sb.append("#");
+			sb.append(member.getPwd());
+			sb.append("#");
+			sb.append(member.getAccount());
+			sb.append("#");
+			sb.append(member.getDate());
+			pw.println(sb.toString());
+			pw.close();
 			
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
-		//회원가입한 사용자 정보를 메모장에 저장하기
 		return true;
 	}
 
