@@ -1,11 +1,8 @@
 package dao;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -47,6 +44,7 @@ public class BankDAOImpl implements BankDAO {
 			map.put(member.getId(), member);
 			map.put(member.getPwd(), member);
 			map.put(member.getName(), member);
+			
 			
 			StringBuilder sb = new StringBuilder(); //하나의 builder내에서 처리가능
 			sb.append(member.getName());

@@ -38,6 +38,7 @@ public class MenuView {
 		int menuNum = sc.nextInt();
 		String id,name,pwd,pwd2;
 		
+		
 
 		switch (menuNum) {
 		case 1:
@@ -59,7 +60,11 @@ public class MenuView {
 					pwd2 = sc.next();
 					
 					if(pwd.equals(pwd2)) { //비밀번호 일치하는지 확인
-						Member member = new Member(id, pwd, name, null, null, 0, 0);
+						System.out.println("최초 입금액을 입력해주세요");
+						System.out.print("입금액 : ");
+						int balance = sc.nextInt();
+						
+						Member member = new Member(id, pwd, name, null, null, balance, "bronze");
 						boolean result1 = controller.insert(member);
 						
 							if(result1) {

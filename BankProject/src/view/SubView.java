@@ -69,6 +69,7 @@ public class SubView {
 			System.out.println("* 이름 : " + member.getName());
 			System.out.println("* 계좌번호 : " + member.getAccount());
 			System.out.println("* 계좌 개설일 : " + member.getDate());
+			System.out.println("* 회원 등급 : " + member.getLevel());
 			System.out.println("===============================================");
 			break;
 			

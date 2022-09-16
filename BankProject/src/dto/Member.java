@@ -11,9 +11,9 @@ public class Member {
 	private LocalDate date; //가입일
 	
 	private int balance;
-	private int point;
+	private String level; //이용자 등급
 
-	public Member(String id, String pwd, String name, String account, LocalDate date, int balance, int point) {
+	public Member(String id, String pwd, String name, String account, LocalDate date, int balance, String level) {
 		super();
 		this.id = id;
 		this.pwd = pwd;
@@ -21,7 +21,7 @@ public class Member {
 		this.account = account;
 		this.date = date;
 		this.balance = balance;
-		this.point = point;
+		this.level = level;
 	}
 	
 	
@@ -55,11 +55,11 @@ public class Member {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	public int getPoint() {
-		return point;
+	public String getLevel() {
+		return level;
 	}
-	public void setPoint(int point) {
-		this.point = point;
+	public void setLevel(String level) {
+		this.level = level;
 	}
 
 	public LocalDate getDate() {
